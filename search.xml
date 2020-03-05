@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo-admin安装使用及遇到得问题]]></title>
+    <url>%2F2020%2F03%2F05%2F2020030502%2F</url>
+    <content type="text"><![CDATA[https://chiwai.tang99.club/posts/2672848395.html]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo访问路径与文章题目分离]]></title>
     <url>%2F2020%2F03%2F05%2F2020030501%2F</url>
-    <content type="text"><![CDATA[hexo new -s ‘article-1’ ‘文章标题’]]></content>
+    <content type="text"><![CDATA[hexo new -s ‘article-1’ ‘文章标题’ https://www.difashi.com/2019-08/17-hexo-3.html]]></content>
   </entry>
   <entry>
     <title><![CDATA[Nginx支持WebSocket]]></title>
