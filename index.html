@@ -12,6 +12,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("http://xxxxxxx.xxx"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
 
 
 
@@ -146,7 +160,9 @@
   <div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
-
+	
+	<a href="https://github.com/yanjr" target="_blank"><img width="149" height="149" style="position:absolute;top:0;left:0;border:0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+	
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -304,6 +320,143 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.yanjr.cn/2020/03/05/2020030501/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yanjr">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中尚未崩坏了的地方">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/05/2020030501/" itemprop="url">Hexo访问路径与文章题目分离</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-05T16:58:41+08:00">
+                2020-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/03/05/2020030501/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/05/2020030501/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          hexo new -s ‘article-1’ ‘文章标题’
+
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/05/2020030501/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.yanjr.cn/2019/08/06/Nginx鏀寔WebSocket/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -407,18 +560,16 @@
       
         
           
-            <p>参考：<a href="https://www.cnblogs.com/kevingrace/p/9512287.html" target="_blank" rel="noopener">散尽浮华</a></p>
-<h3 id="错误：Unexpected-response-code-400"><a href="#错误：Unexpected-response-code-400" class="headerlink" title="错误：Unexpected response code: 400"></a>错误：<font color="red">Unexpected response code: 400</font></h3><p>WebSocket是目前比较成熟的技术了，WebSocket协议为创建客户端和服务器端需要实时双向通讯的webapp提供了一个选择。其为HTML5的一部分，WebSocket相较于原来开发这类app的方法来说，其能使开发更加地简单。大部分现在的浏览器都支持WebSocket，比如Firefox，IE，Chrome，Safari，Opera，并且越来越多的服务器框架现在也同样支持WebSocket。</p>
-<p>在实际的生产环境中，要求多个WebSocket服务器必须具有高性能和高可用，那么WebSocket协议就需要一个负载均衡层，NGINX从1.3版本开始支持WebSocket，其可以作为一个反向代理和为WebSocket程序做负载均衡。</p>
-<p>WebSocket协议与HTTP协议不同，但WebSocket握手与HTTP兼容，使用HTTP升级工具将连接从HTTP升级到WebSocket。这允许WebSocket应用程序更容易地适应现有的基础架构。例如，WebSocket应用程序可以使用标准HTTP端口80和443，从而允许使用现有的防火墙规则。</p>
-<p>WebSocket应用程序可以在客户端和服务器之间保持长时间运行的连接，从而有助于开发实时应用程序。用于将连接从HTTP升级到WebSocket的HTTP升级机制使用Upgrade和Connection头。反向代理服务器在支持WebSocket时面临一些挑战。一个是WebSocket是一个逐跳协议，因此当代理服务器拦截客户端的升级请求时，需要向后端服务器发送自己的升级请求，包括相应的头文件。此外，由于WebSocket连接长期存在，与HTTP使用的典型短期连接相反，反向代理需要允许这些连接保持打开状态，而不是关闭它们，因为它们似乎处于空闲状态。</p>
-<p>允许在客户机和后端服务器之间建立隧道，NGINX支持WebSocket。对于NGINX将升级请求从客户端发送到后台服务器，必须明确设置Upgrade和Connection标题。</p>
-<h2 id="Nginx开启websocket代理功能的配置如下："><a href="#Nginx开启websocket代理功能的配置如下：" class="headerlink" title="Nginx开启websocket代理功能的配置如下："></a>Nginx开启websocket代理功能的配置如下：</h2><p>1）编辑nginx.conf，在http区域内一定要添加下面配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">map $http_upgrade $connection_upgrade &#123;</span><br><span class="line">    default upgrade;</span><br><span class="line">    &apos;&apos; close;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>map指令的作用：<br>该作用主要是根据客户端请求中$http_upgrade 的值，来构造改变$connection_upgrade的值，即根据变量$http_upgrade的值创建新的变量$connection_upgrade，<br>创建的规则就是{}里面的东西。其中的规则没有做匹配，因此使用默认的，即 $connection_upgrade 的值会一直是 upgrade。然后如果 $http_upgrade为空字符串的话，<br>那值会是 close。</p>
-<p>2）编辑vhosts下虚拟主机的配置文件，在location匹配配置中添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">proxy_http_version 1.1;</span><br><span class="line">proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">proxy_set_header Connection &quot;Upgrade&quot;;</span><br></pre></td></tr></table></figure></p>
-<p>示例如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">           proxy_pass http://127.0.0.1:8080;</span><br><span class="line">           proxy_set_header Host $host:$server_port;  # </span><br><span class="line">           proxy_http_version 1.1;						# 表明使用http版本为1.1,支持websocket</span><br><span class="line">           proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">           proxy_set_header Connection &quot;upgrade&quot;;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
-
-          
+          参考：散尽浮华
+错误：Unexpected response code: 400WebSocket是目前比较成熟的技术了，WebSocket协议为创建客户端和服务器端需要实时双向通讯的webapp提供了一个选择。其为HTML5的一部分，WebSocket相较于原来开发这类app的方法来说，其能使开发
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/06/Nginx鏀寔WebSocket/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -568,20 +719,17 @@
       
         
           
-            <p>转自：<a href="https://www.cnblogs.com/zzablog/p/9487912.html" target="_blank" rel="noopener">安love</a></p>
-<p><img src="https://wx4.sinaimg.cn/mw690/006T7jotly1g5kgqqq9g9j30u00u00wt.jpg" alt="美女"></p>
-<p>在数据库的日常维护工作中，除了保证业务的正常运行以外，就是要对数据库进行备份，以免造成数据库的丢失，从而给企业带来重大经济损失。<br>通常备份可以按照备份时数据库状态分为热备和冷备，按照备份数据库文件的大小分为增量备份、差异备份和全量备份。<br>这里，我们讲解一种全量备份的方法，来实现定时备份数据到mysql脚本文件，并且支持过期删除。</p>
-<p>1、新建shell脚本</p>
-<p><a href="https://ajax.yanjr.cn/mysqlBackup.sh" target="_blank" rel="noopener">mysqlBackup.sh</a></p>
-<p>2、修改shell脚本属性，赋予执行权<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 600 /opt/mysqlBackup.sh</span><br><span class="line">chmod +x /opt/mysqlBackup.sh</span><br></pre></td></tr></table></figure></p>
-<p>3、定时执行脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/crontab</span><br></pre></td></tr></table></figure></p>
-<p>添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">00 03 * * * root /root/mysqlBackup.sh</span><br></pre></td></tr></table></figure></p>
-<p>分 时</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /var/spool/mail/root <span class="comment">#可查看脚本执行日志</span></span><br></pre></td></tr></table></figure>
-<p>4、MySQL恢复<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u username -p databse &lt; backup.sql</span><br></pre></td></tr></table></figure></p>
-<pre><code>用户名           数据库名    备份sql
-</code></pre>
-          
+          转自：安love
+
+在数据库的日常维护工作中，除了保证业务的正常运行以外，就是要对数据库进行备份，以免造成数据库的丢失，从而给企业带来重大经济损失。通常备份可以按照备份时数据库状态分为热备和冷备，按照备份数据库文件的大小分为增量备份、差异备份和全量备份。这里，我们讲解一种全量备份的方法，来实现定时备
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/02/CentOS-MySQL鑷姩澶囦唤shell鑴氭湰/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -731,37 +879,15 @@
       
         
           
-            <h3 id="logrotate介绍"><a href="#logrotate介绍" class="headerlink" title="logrotate介绍"></a>logrotate介绍</h3><p>logrotate是个十分有用的工具，它可以自动对日志进行截断（或轮循）、压缩以及删除旧的日志文件。例如，你可以设置logrotate，让/var/log/foo日志文件每30天轮循，并删除超过6个月的日志。配置完后，logrotate的运作完全自动化，不必进行任何进一步的人为干预。另外，旧日志也可以通过电子邮件发送，不过该选项超出了本教程的讨论范围。</p>
-<h3 id="logrotate安装"><a href="#logrotate安装" class="headerlink" title="logrotate安装"></a>logrotate安装</h3><p>主流Linux发行版上都默认安装有logrotate包，如果出于某种原因，logrotate没有出现在里头，你可以使用apt-get或yum命令来安装。<br>在Debian或Ubuntu上：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install logrotate cron</span><br></pre></td></tr></table></figure></p>
-<p>在Fedora，CentOS或RHEL上：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install logrotate crontabs</span><br></pre></td></tr></table></figure></p>
-<p>logrotate的配置文件是/etc/logrotate.conf，通常不需要对它进行修改。日志文件的轮循设置在独立的配置文件中，它（们）放在/etc/logrotate.d/目录下。</p>
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><ul>
-<li>/etc/logrotate.conf </li>
-<li>/etc/logrotate.d/</li>
-<li>/etc/logrotate.conf会包含/etc/logrotate.d/目录下的配置文件<br>由于logratate已经加到cron.daily（/etc/cron.daily/logrotate），不再需要加到计划任务中</li>
-</ul>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
-<li>logrotate /etc/logrotate.conf    用配置文件的话，不能马上有效，直接使用命令马上可以生效；要调用为/etc/lograte.d/下配置的所有日志调用logrotate。</li>
-<li>logrotate -f  /etc/logrotate.conf   强制执行</li>
-<li>/usr/sbin/logrotate -f /etc/logrotate.d/nginx  立即执行logratate；要为某个特定的配置调用logrotate。</li>
-</ul>
-<h3 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h3><p>compress：对轮询出来的日志文件进行压缩，默认我gzip<br>nocompress：对轮询出来的日志文件不进行压缩<br>compresscmd：指定使用什么方式进行压缩，默认为gzip。指定的格式为：compresscmd /usr/bin/bzip2<br>compressext： 指定压缩文件的后缀，如：compressext.bz2，默认随压缩方式的<br>uncompresscmd：解压方式，默认为gunzip<br>copy：日志轮询的时候，对原日志文件进行copy，不改变原文件，相当于对原文件进行了一个快照，此选项使用的时候，create不生效<br>nocopy：对原日志文件不进行拷贝，此选项会覆盖copy选项<br>create mode owner group, create owner group：日志轮询后会创建一个新的原来名字的文件，可以设置权限和所属者或者所属组，如create 755 root lile<br>nocreate：轮询后不创建，也就是把要轮询的日志轮询后不会产生一个原来名字的文件，此选项会覆盖create<br>olddir directory：指定轮询出来的日志文件存放的目录<br>noolddir：轮询出来的日志文件放在与原日志文件一样的目录，此选项会覆盖olddir<br>createolddir mode owner group：当指定轮询日志存放路径的时候，若路径不存在，则创建<br>nocreateolddir： 当指定轮询日志存放路径的时候，若路径不存在，不创建，此选项会覆盖createolddir<br>hourly：  日志每小时做一次轮询<br>daily：     日志每天做一次轮询<br>weekly： 日志每个星期做一次轮询<br>monthly：日志每月做一次轮询<br>yearly：日志每年做一次轮询<br>dateext：轮询出的日志名字后加上日期<br>nodateext： 轮询出的日志名字不使用日期的方式，此选项会覆盖dateext<br>dateformat format_string：日期的格式<br>dateyesterday：今天做的轮询的话，文件名的日期写昨天的<br>delaycompress：新的轮询日志不会马上压缩，等到下一个新的轮询日志出现的时候才做压缩，要与compress参数一起使用<br>nodelaycompress：不会延期压缩，轮询日志后会马上进行压缩，要与compress参数一起使用；此选项会覆盖delaycompress选项<br>ifempty：即使日志文件为空，也要做轮询，默认为ifempty<br>notifempty：日志文件为空的话，不做轮询，会覆盖ifempty参<br>missingok：如果要做日志轮询的日志文件不存在，那么忽略，接着做其他的<br>nomissingok：如果要做日志轮询的日志文件不存在，那么不会继续执行后面的，而会返回错误，默认为nomissing<br>maxage count：删除指定count天前的日志，如果配置了mail的话，删除的日志将会发送到指定的邮箱<br>start count：如果不使用dateext，轮询出的日志文件不会使用日期作为后缀，而会使用数字，star count 可以设置这个数字的开始至，如：start 9，那么就会以9开始，如log_file.9<br>rotate count：轮询文件的个数，当个数满了之后，会删除最老的<br>size size：只有当原日志文件的大小达到指定的size时，才做轮询，单位自定义<br>postrotate/endscript：在日志被轮转后执行<br>prerotate/endscript：在日志被轮转前并且有需要轮转才执行<br>sharedscripts：当匹配文件夹里时，时间久后，会有很多以原文件加日期命名的轮询日志，而我只需要最匹配最原始的文件做轮询，这个选项就是为了做这个设置；如果没有的话，被轮询出来的日志再下一次轮询时也会被匹配到也做轮询  </p>
-<h3 id="常用实例"><a href="#常用实例" class="headerlink" title="常用实例"></a>常用实例</h3><ul>
-<li>tomcat日志切割<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/logrotate.d/tomcat</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/usr/apache-tomcat-<span class="number">8.5</span>.<span class="number">35</span>/logs/catalina.out &#123;</span><br><span class="line">copytruncate</span><br><span class="line">daily</span><br><span class="line">rotate <span class="number">10</span></span><br><span class="line">missingok</span><br><span class="line">dateext</span><br><span class="line">compress</span><br><span class="line">notifempty</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>nginx访问日志每天做日志分割<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/logrotate.d/nginx</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/var/<span class="built_in">log</span>/nginx/*<span class="built_in">log</span> &#123;</span><br><span class="line">    create <span class="number">0644</span> nginx nginx</span><br><span class="line">    daily</span><br><span class="line">    rotate <span class="number">10</span></span><br><span class="line">    missingok</span><br><span class="line">    notifempty</span><br><span class="line">    compress</span><br><span class="line">    sharedscripts</span><br><span class="line">    postrotate</span><br><span class="line">        /bin/kill -USR1 `<span class="keyword">cat</span> /usr/local/nginx/logs/nginx.pid <span class="number">2</span>&gt;/dev/null` <span class="number">2</span>&gt;/dev/null || true</span><br><span class="line">    endscript</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> 参考：<br><a href="https://www.cnblogs.com/lemon-le/p/8476648.html" target="_blank" rel="noopener">https://www.cnblogs.com/lemon-le/p/8476648.html</a><br><a href="https://linux.cn/article-4126-1.html" target="_blank" rel="noopener">https://linux.cn/article-4126-1.html</a></p>
-</blockquote>
-<hr>
-
-          
+          logrotate介绍logrotate是个十分有用的工具，它可以自动对日志进行截断（或轮循）、压缩以及删除旧的日志文件。例如，你可以设置logrotate，让/var/log/foo日志文件每30天轮循，并删除超过6个月的日志。配置完后，logrotate的运作完全自动化，不必进行任何进一步的人为
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/11/Liunx涓嬬殑鏃ュ織鍒囧壊宸ュ叿-logrotate/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -911,24 +1037,18 @@
       
         
           
-            <p>ufw是一个主机端的iptables类防火墙配置工具，比较容易上手。一般桌面应用使用ufw已经可以满足要求了。</p>
-<h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install ufw</span><br></pre></td></tr></table></figure>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>1 启用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw <span class="built_in">enable</span></span><br><span class="line">sudo ufw default deny</span><br></pre></td></tr></table></figure></p>
-<p>作用：开启了防火墙并随系统启动同时关闭所有外部对本机的访问（本机访问外部正常）。</p>
-<p>2 关闭<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw <span class="built_in">disable</span></span><br></pre></td></tr></table></figure></p>
-<p>2 查看防火墙状态<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw status</span><br></pre></td></tr></table></figure></p>
-<p>3 开启/禁用相应端口或服务举例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow 80</span><br></pre></td></tr></table></figure></p>
-<p>允许外部访问80端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw delete allow 80</span><br></pre></td></tr></table></figure></p>
-<p>禁止外部访问80 端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow from 192.168.1.1</span><br></pre></td></tr></table></figure></p>
-<p>允许此IP访问所有的本机端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw deny smtp</span><br></pre></td></tr></table></figure></p>
-<p>禁止外部访问smtp服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw delete allow smtp</span><br></pre></td></tr></table></figure></p>
-<p>删除上面建立的某条规则<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw deny proto tcp from 10.0.0.0/8 to 192.168.0.1 port 22</span><br></pre></td></tr></table></figure></p>
-<p>  要拒绝所有的TCP流量从10.0.0.0/8 到192.168.0.1地址的22端口<br> 可以允许所有RFC1918网络（局域网/无线局域网的）访问这个主机（/8,/16,/12是一种网络分级）：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow from 10.0.0.0/8</span><br><span class="line">sudo ufw allow from 172.16.0.0/12</span><br><span class="line">sudo ufw allow from 192.168.0.0/16</span><br></pre></td></tr></table></figure></p>
-<h3 id="推荐设置"><a href="#推荐设置" class="headerlink" title="推荐设置"></a>推荐设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ufw</span><br><span class="line">sudo ufw <span class="built_in">enable</span></span><br><span class="line">sudo ufw default deny</span><br></pre></td></tr></table></figure>
-<p>这样设置已经很安全，如果有特殊需要，可以使用sudo ufw allow开启相应服务。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow 80/tcp</span><br><span class="line">ufw delete allow 80/tcp</span><br></pre></td></tr></table></figure></p>
-<h3 id="详细使用说明"><a href="#详细使用说明" class="headerlink" title="详细使用说明"></a>详细使用说明</h3><p>More info: <a href="http://wiki.ubuntu.org.cn/Ufw使用指南" target="_blank" rel="noopener">Ufw中文使用指南</a></p>
-
-          
+          ufw是一个主机端的iptables类防火墙配置工具，比较容易上手。一般桌面应用使用ufw已经可以满足要求了。
+安装方法1$ sudo apt-get install ufw
+使用方法1 启用12sudo ufw enablesudo ufw default deny
+作用：开启了防火墙并随系统启动
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/03/UFW-firewall-simple-setup/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1056,17 +1176,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/30/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1146,7 +1264,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1205,7 +1323,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -1215,7 +1334,14 @@
 </div>
 
 
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<!--
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
 
 
 
@@ -1224,9 +1350,10 @@
 
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+-->
 <div class="BbeiAn-info">
-鲁ICP备 -
-<a target="_blank" href="http://icp.chinaz.com/yanjr.cn">15018213号</a>
+鲁ICP备
+<a target="_blank" href="http://www.beian.miit.gov.cn">15018213号</a>
 
 </div>
 
@@ -1364,6 +1491,19 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
 
 
 
