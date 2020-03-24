@@ -96,7 +96,7 @@
 <meta name="description" content="blog.yanjr.cn">
 <meta property="og:type" content="website">
 <meta property="og:title" content="我心中尚未崩坏了的地方">
-<meta property="og:url" content="http://blog.yanjr.cn/categories/linux/index.html">
+<meta property="og:url" content="http://blog.yanjr.cn/categories/Linux/index.html">
 <meta property="og:site_name" content="我心中尚未崩坏了的地方">
 <meta property="og:description" content="blog.yanjr.cn">
 <meta property="og:locale" content="zh-Hans">
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.yanjr.cn/categories/linux/">
+  <link rel="canonical" href="http://blog.yanjr.cn/categories/Linux/">
 
 
 
 
 
-  <title>分类: linux | 我心中尚未崩坏了的地方</title>
+  <title>分类: Linux | 我心中尚未崩坏了的地方</title>
   
 
 
@@ -312,7 +312,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>linux<small>分类</small>
+        <h1>Linux<small>分类</small>
         </h1>
       </div>
 
@@ -324,69 +324,17 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/08/02/CentOS-MySQL鑷姩澶囦唤shell鑴氭湰/" itemprop="url">
+            <a class="post-title-link" href="/2020/03/24/20200324/" itemprop="url">
               
-                <span itemprop="name">CentOS MySQL自动备份shell脚本</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-02T11:31:00+08:00" content="2019-08-02">
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/11/Liunx涓嬬殑鏃ュ織鍒囧壊宸ュ叿-logrotate/" itemprop="url">
-              
-                <span itemprop="name">Liunx下的日志切割工具-logrotate</span>
+                <span itemprop="name">ActiveMQ远程监控JXM设置</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-11T10:08:00+08:00" content="2019-02-11">
-          02-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/03/UFW-firewall-simple-setup/" itemprop="url">
-              
-                <span itemprop="name">UFW firewall simple setup</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-03T10:22:00+08:00" content="2019-02-03">
-          02-03
+        <time class="post-time" itemprop="dateCreated" datetime="2020-03-24T19:22:00+08:00" content="2020-03-24">
+          03-24
         </time>
       </div>
 
@@ -447,7 +395,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -458,7 +406,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -469,7 +417,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -989,6 +937,74 @@
               })
               searchResultList += "</ul>";
               resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+.innerHTML = searchResultList;
             }
           }
 
