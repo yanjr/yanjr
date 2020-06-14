@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Nacos,">
 
 
 
@@ -93,16 +93,20 @@
 
 
 
-<meta name="description" content="blog.yanjr.cn">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我心中尚未崩坏了的地方">
-<meta property="og:url" content="http://blog.yanjr.cn/index.html">
+<meta name="description" content="Nacos集群部署说明 集群部署架构图因此开源的时候推荐用户把所有服务列表放到一个vip下面，然后挂到一个域名下面 http://ip1:port/openAPI 直连ip模式，机器挂则需要修改ip才可以使用。 http://VIP:port/openAPI 挂载VIP模式，直连vip即可，下面挂server真实ip，可读性不好。 http://nacos.com:port/openAPI 域名">
+<meta name="keywords" content="Nacos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nacos集群部署说明">
+<meta property="og:url" content="http://blog.yanjr.cn/2020/06/12/Nacos-cluters-deployment-instructions/index.html">
 <meta property="og:site_name" content="我心中尚未崩坏了的地方">
-<meta property="og:description" content="blog.yanjr.cn">
+<meta property="og:description" content="Nacos集群部署说明 集群部署架构图因此开源的时候推荐用户把所有服务列表放到一个vip下面，然后挂到一个域名下面 http://ip1:port/openAPI 直连ip模式，机器挂则需要修改ip才可以使用。 http://VIP:port/openAPI 挂载VIP模式，直连vip即可，下面挂server真实ip，可读性不好。 http://nacos.com:port/openAPI 域名">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/338441/1561258986171-4ddec33c-a632-4ec3-bfff-7ef4ffc33fb9.jpeg">
+<meta property="og:updated_time" content="2020-06-12T09:52:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我心中尚未崩坏了的地方">
-<meta name="twitter:description" content="blog.yanjr.cn">
+<meta name="twitter:title" content="Nacos集群部署说明">
+<meta name="twitter:description" content="Nacos集群部署说明 集群部署架构图因此开源的时候推荐用户把所有服务列表放到一个vip下面，然后挂到一个域名下面 http://ip1:port/openAPI 直连ip模式，机器挂则需要修改ip才可以使用。 http://VIP:port/openAPI 挂载VIP模式，直连vip即可，下面挂server真实ip，可读性不好。 http://nacos.com:port/openAPI 域名">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/338441/1561258986171-4ddec33c-a632-4ec3-bfff-7ef4ffc33fb9.jpeg">
 
 
 
@@ -132,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.yanjr.cn/">
+  <link rel="canonical" href="http://blog.yanjr.cn/2020/06/12/Nacos-cluters-deployment-instructions/">
 
 
 
 
 
-  <title>我心中尚未崩坏了的地方</title>
+  <title>Nacos集群部署说明 | 我心中尚未崩坏了的地方</title>
   
 
 
@@ -157,8 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	
 	<a href="https://github.com/yanjr" target="_blank"><img width="149" height="149" style="position:absolute;top:0;left:0;border:0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
@@ -305,9 +308,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -337,9 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/12/Nacos-cluters-deployment-instructions/" itemprop="url">Nacos集群部署说明</a></h1>
+          <h1 class="post-title" itemprop="name headline">Nacos集群部署说明</h1>
         
 
         <div class="post-meta">
@@ -421,21 +422,38 @@
       
 
       
-        
-          
-          Nacos集群部署说明
-集群部署架构图因此开源的时候推荐用户把所有服务列表放到一个vip下面，然后挂到一个域名下面
-http://ip1:port/openAPI 直连ip模式，机器挂则需要修改ip才可以使用。
-http://VIP:port/openAPI 挂载VIP模式，直连vip即可，下面挂s
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/06/12/Nacos-cluters-deployment-instructions/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>Nacos集群部署说明</p>
+<h2 id="集群部署架构图"><a href="#集群部署架构图" class="headerlink" title="集群部署架构图"></a>集群部署架构图</h2><p>因此开源的时候推荐用户把所有服务列表放到一个vip下面，然后挂到一个域名下面</p>
+<p><a href="http://ip1:port/openAPI" target="_blank" rel="noopener">http://ip1:port/openAPI</a> 直连ip模式，机器挂则需要修改ip才可以使用。</p>
+<p><a href="http://VIP:port/openAPI" target="_blank" rel="noopener">http://VIP:port/openAPI</a> 挂载VIP模式，直连vip即可，下面挂server真实ip，可读性不好。</p>
+<p><a href="http://nacos.com:port/openAPI" target="_blank" rel="noopener">http://nacos.com:port/openAPI</a> 域名 + VIP模式/Nginx，可读性好，而且换ip方便，推荐模式</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/338441/1561258986171-4ddec33c-a632-4ec3-bfff-7ef4ffc33fb9.jpeg" alt="nacos-clusters" title="nacos clusters"></p>
+<h2 id="1-预备环境准备"><a href="#1-预备环境准备" class="headerlink" title="1. 预备环境准备"></a>1. 预备环境准备</h2><p>安装环境：</p>
+<ol>
+<li>64 bit Contos7;</li>
+<li>64 bit JDK 1.8+；</li>
+<li>3个或3个以上Nacos节点才能构成集群；</li>
+<li>mysql5.7</li>
+<li>nginx</li>
+</ol>
+<h2 id="2-下载安装包"><a href="#2-下载安装包" class="headerlink" title="2. 下载安装包"></a>2. 下载安装包</h2><p>More info: <a href="https://github.com/alibaba/nacos/releases" target="_blank" rel="noopener">download</a></p>
+<h2 id="3-配置集群配置文件"><a href="#3-配置集群配置文件" class="headerlink" title="3. 配置集群配置文件"></a>3. 配置集群配置文件</h2><p>在nacos的解压目录nacos/的conf目录下，有配置文件cluster.conf，请每行配置成ip:port。（请配置3个或3个以上节点）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ip:port</span></span><br><span class="line">200.8.9.16:8848</span><br><span class="line">200.8.9.17:8848</span><br><span class="line">200.8.9.18:8848</span><br></pre></td></tr></table></figure>
+<h2 id="4-确定数据源"><a href="#4-确定数据源" class="headerlink" title="4. 确定数据源"></a>4. 确定数据源</h2><h3 id="使用内置数据源"><a href="#使用内置数据源" class="headerlink" title="使用内置数据源"></a>使用内置数据源</h3><p>无需进行任何配置</p>
+<h3 id="使用外置数据源"><a href="#使用外置数据源" class="headerlink" title="使用外置数据源"></a>使用外置数据源</h3><p>生产使用建议至少主备模式，或者采用高可用数据库。</p>
+<p>具体的操作步骤：</p>
+<ul>
+<li>1.安装数据库，版本要求：5.6.5+</li>
+<li>2.初始化mysql数据库，数据库初始化文件：nacos/conf/nacos-mysql.sql</li>
+<li>3.修改conf/application.properties文件，增加支持mysql数据源配置（目前只支持mysql），添加mysql数据源的url、用户名和密码，添加在文件最后。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.platform=mysql</span><br><span class="line"></span><br><span class="line">db.num=1</span><br><span class="line">db.url.0=jdbc:mysql://11.162.196.16:3306/nacos_devtest?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=<span class="literal">true</span></span><br><span class="line">db.user=nacos_devtest</span><br><span class="line">db.password=youdontknow</span><br></pre></td></tr></table></figure>
+<h2 id="5-启动服务器"><a href="#5-启动服务器" class="headerlink" title="5. 启动服务器"></a>5. 启动服务器</h2><h4 id="集群模式"><a href="#集群模式" class="headerlink" title="集群模式"></a>集群模式</h4><blockquote>
+<p>使用外置数据源</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh startup.sh</span><br></pre></td></tr></table></figure>
+<h2 id="6-关闭服务器"><a href="#6-关闭服务器" class="headerlink" title="6. 关闭服务器"></a>6. 关闭服务器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh shutdown.sh</span><br></pre></td></tr></table></figure>
+<h2 id="7-Nginx配置"><a href="#7-Nginx配置" class="headerlink" title="7. Nginx配置"></a>7. Nginx配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">upstream nacoscluster &#123;</span><br><span class="line">        server 200.8.9.16:8848;</span><br><span class="line">        server 200.8.9.17:8848;</span><br><span class="line">        server 200.8.9.18:8848;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name     200.8.9.15;</span><br><span class="line">        location / &#123;</span><br><span class="line">                proxy_pass http://nacoscluster;</span><br><span class="line">                index index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -450,333 +468,36 @@ http://VIP:port/openAPI 挂载VIP模式，直连vip即可，下面挂s
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.yanjr.cn/2019/08/06/Nginx鏀寔WebSocket/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yanjr">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我心中尚未崩坏了的地方">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/06/Nginx鏀寔WebSocket/" itemprop="url">Nginx支持WebSocket</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-06T18:48:00+08:00">
-                2019-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/nginx/" itemprop="url" rel="index">
-                    <span itemprop="name">nginx</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Nacos/" rel="tag"># Nacos</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/08/06/Nginx鏀寔WebSocket/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/06/Nginx鏀寔WebSocket/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          参考：散尽浮华
-错误：Unexpected response code: 400WebSocket是目前比较成熟的技术了，WebSocket协议为创建客户端和服务器端需要实时双向通讯的webapp提供了一个选择。其为HTML5的一部分，WebSocket相较于原来开发这类app的方法来说，其能使开发
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/06/Nginx鏀寔WebSocket/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/06/Nginx鏀寔WebSocket/" rel="next" title="Nginx支持WebSocket">
+                <i class="fa fa-chevron-left"></i> Nginx支持WebSocket
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.yanjr.cn/2019/08/02/CentOS-MySQL鑷姩澶囦唤shell鑴氭湰/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yanjr">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我心中尚未崩坏了的地方">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/02/CentOS-MySQL鑷姩澶囦唤shell鑴氭湰/" itemprop="url">CentOS MySQL自动备份shell脚本</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-02T11:31:00+08:00">
-                2019-08-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/08/02/CentOS-MySQL鑷姩澶囦唤shell鑴氭湰/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/02/CentOS-MySQL鑷姩澶囦唤shell鑴氭湰/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          转自：安love
-
-在数据库的日常维护工作中，除了保证业务的正常运行以外，就是要对数据库进行备份，以免造成数据库的丢失，从而给企业带来重大经济损失。通常备份可以按照备份时数据库状态分为热备和冷备，按照备份数据库文件的大小分为增量备份、差异备份和全量备份。这里，我们讲解一种全量备份的方法，来实现定时备
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/02/CentOS-MySQL鑷姩澶囦唤shell鑴氭湰/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -786,472 +507,25 @@ http://VIP:port/openAPI 挂载VIP模式，直连vip即可，下面挂s
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.yanjr.cn/2019/02/11/Liunx涓嬬殑鏃ュ織鍒囧壊宸ュ叿-logrotate/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yanjr">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我心中尚未崩坏了的地方">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/11/Liunx涓嬬殑鏃ュ織鍒囧壊宸ュ叿-logrotate/" itemprop="url">Liunx下的日志切割工具-logrotate</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T10:08:00+08:00">
-                2019-02-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/11/Liunx涓嬬殑鏃ュ織鍒囧壊宸ュ叿-logrotate/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/11/Liunx涓嬬殑鏃ュ織鍒囧壊宸ュ叿-logrotate/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          logrotate介绍logrotate是个十分有用的工具，它可以自动对日志进行截断（或轮循）、压缩以及删除旧的日志文件。例如，你可以设置logrotate，让/var/log/foo日志文件每30天轮循，并删除超过6个月的日志。配置完后，logrotate的运作完全自动化，不必进行任何进一步的人为
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/11/Liunx涓嬬殑鏃ュ織鍒囧壊宸ュ叿-logrotate/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.yanjr.cn/2019/02/03/UFW-firewall-simple-setup/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yanjr">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我心中尚未崩坏了的地方">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/03/UFW-firewall-simple-setup/" itemprop="url">UFW firewall simple setup</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-03T10:22:00+08:00">
-                2019-02-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/03/UFW-firewall-simple-setup/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/03/UFW-firewall-simple-setup/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          ufw是一个主机端的iptables类防火墙配置工具，比较容易上手。一般桌面应用使用ufw已经可以满足要求了。
-安装方法1$ sudo apt-get install ufw
-使用方法1 启用12sudo ufw enablesudo ufw default deny
-作用：开启了防火墙并随系统启动
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/03/UFW-firewall-simple-setup/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.yanjr.cn/2018/08/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yanjr">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我心中尚未崩坏了的地方">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/30/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-30T09:46:00+08:00">
-                2018-08-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/08/30/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/30/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/30/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
   
 
 
-          </div>
-          
-
-
-          
 
         </div>
         
@@ -1272,8 +546,17 @@ http://VIP:port/openAPI 挂载VIP模式，直连vip即可，下面挂s
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1333,6 +616,22 @@ http://VIP:port/openAPI 挂载VIP模式，直连vip即可，下面挂s
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#集群部署架构图"><span class="nav-number">1.</span> <span class="nav-text">集群部署架构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-预备环境准备"><span class="nav-number">2.</span> <span class="nav-text">1. 预备环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-下载安装包"><span class="nav-number">3.</span> <span class="nav-text">2. 下载安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置集群配置文件"><span class="nav-number">4.</span> <span class="nav-text">3. 配置集群配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-确定数据源"><span class="nav-number">5.</span> <span class="nav-text">4. 确定数据源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用内置数据源"><span class="nav-number">5.1.</span> <span class="nav-text">使用内置数据源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用外置数据源"><span class="nav-number">5.2.</span> <span class="nav-text">使用外置数据源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-启动服务器"><span class="nav-number">6.</span> <span class="nav-text">5. 启动服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#集群模式"><span class="nav-number">6.0.1.</span> <span class="nav-text">集群模式</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#6-关闭服务器"><span class="nav-number">7.</span> <span class="nav-text">6. 关闭服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Nginx配置"><span class="nav-number">8.</span> <span class="nav-text">7. Nginx配置</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1481,6 +780,10 @@ http://VIP:port/openAPI 挂载VIP模式，直连vip即可，下面挂s
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
