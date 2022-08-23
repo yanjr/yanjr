@@ -5,7 +5,7 @@
 
 👋 Hi, I’m @yanjr, you can call me Darui.
  - A passionate software developer from China.
- - Occasionally blogging on [yanjr.cn](https://yanjr.cn) 📖
+ - Occasionally blogging on [yanjr.cn](https://www.yanjr.cn) 📖
  - Java 
  
  
