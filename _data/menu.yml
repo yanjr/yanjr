@@ -2,12 +2,15 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: info
+  - title: me
     entries:
-      - title: a (nearly) no-CSS, fast, minimalist Jekyll theme.
-      - title: github repo
-        url: https://github.com/riggraz/no-style-please
-      - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+      - title: email
+        url: mailto:big123@126.com"
+      - title: github
+        url: https://github.com/yanjr
+      - title: twitter
+        url: https://twitter.com/Ryan85133083
+      - title: "keep in touch: <a href='/'>newsletter</a>, <a href='/feed.xml'>rss feed</a>"
 
   - title: all posts
     post_list:
@@ -22,9 +25,6 @@ entries:
       show_more: true
       show_more_text: See more posts...
       show_more_url: example2-archive.html
-
-  - title: rss
-    url: feed.xml
   
   - title: another list
     entries:
