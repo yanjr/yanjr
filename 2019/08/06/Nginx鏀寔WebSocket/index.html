@@ -6,10 +6,10 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 <script>
@@ -34,8 +34,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -54,7 +54,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -62,9 +62,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="websocket,">
+  <meta name="keywords" content="websocket," />
 
 
 
@@ -94,24 +94,24 @@
 
 
 <meta name="description" content="参考：散尽浮华 错误：Unexpected response code: 400WebSocket是目前比较成熟的技术了，WebSocket协议为创建客户端和服务器端需要实时双向通讯的webapp提供了一个选择。其为HTML5的一部分，WebSocket相较于原来开发这类app的方法来说，其能使开发更加地简单。大部分现在的浏览器都支持WebSocket，比如Firefox，IE，Chrome，Sa">
-<meta name="keywords" content="websocket">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx支持WebSocket">
-<meta property="og:url" content="https://www.yanjr.cn/2019/08/06/Nginx鏀寔WebSocket/index.html">
+<meta property="og:url" content="https://www.yanjr.cn/2019/08/06/Nginx%E9%8F%80%EE%88%9B%E5%AF%94WebSocket/index.html">
 <meta property="og:site_name" content="我心中尚未崩坏了的地方">
 <meta property="og:description" content="参考：散尽浮华 错误：Unexpected response code: 400WebSocket是目前比较成熟的技术了，WebSocket协议为创建客户端和服务器端需要实时双向通讯的webapp提供了一个选择。其为HTML5的一部分，WebSocket相较于原来开发这类app的方法来说，其能使开发更加地简单。大部分现在的浏览器都支持WebSocket，比如Firefox，IE，Chrome，Sa">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-05T08:19:10.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-08-06T10:48:00.000Z">
+<meta property="article:modified_time" content="2020-03-05T08:19:10.000Z">
+<meta property="article:author" content="Darui">
+<meta property="article:tag" content="websocket">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx支持WebSocket">
-<meta name="twitter:description" content="参考：散尽浮华 错误：Unexpected response code: 400WebSocket是目前比较成熟的技术了，WebSocket协议为创建客户端和服务器端需要实时双向通讯的webapp提供了一个选择。其为HTML5的一部分，WebSocket相较于原来开发这类app的方法来说，其能使开发更加地简单。大部分现在的浏览器都支持WebSocket，比如Firefox，IE，Chrome，Sa">
 
 
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '',
     scheme: 'Muse',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -134,7 +134,7 @@
 
 
 
-  <link rel="canonical" href="https://www.yanjr.cn/2019/08/06/Nginx鏀寔WebSocket/">
+  <link rel="canonical" href="https://www.yanjr.cn/2019/08/06/Nginx鏀寔WebSocket/"/>
 
 
 
@@ -150,9 +150,9 @@
 
 
 
-</head>
+<meta name="generator" content="Hexo 6.0.0"></head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -162,16 +162,17 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	
-	<a href="https://github.com/yanjr" target="_blank"><img width="149" height="149" style="position:absolute;top:0;left:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+	<a href="https://github.com/yanjr" target="_blank"><img width="149" height="149" 
+	style="position:absolute;top:0;left:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 	
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">我心中尚未崩坏了的地方</span>
         <span class="logo-line-after"><i></i></span>
@@ -199,9 +200,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -209,9 +210,9 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -219,9 +220,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -229,9 +230,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -239,9 +240,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -249,9 +250,9 @@
       
         
         <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
+          <a href="/404/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
             公益404
           </a>
@@ -264,7 +265,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -285,7 +286,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -317,20 +320,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanjr.cn/2019/08/06/Nginx鏀寔WebSocket/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanjr.cn/2019/08/06/Nginx%E9%8F%80%EE%88%9B%E5%AF%94WebSocket/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Darui">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="我心中尚未崩坏了的地方">
     </span>
 
@@ -362,7 +365,7 @@
           </span>
 
           
-            <span class="post-category">
+            <span class="post-category" >
             
               <span class="post-meta-divider">|</span>
             
@@ -373,7 +376,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/nginx/" itemprop="url" rel="index">
                     <span itemprop="name">nginx</span>
                   </a>
@@ -411,16 +414,27 @@
       
 
       
-        <p>参考：<a href="https://www.cnblogs.com/kevingrace/p/9512287.html" target="_blank" rel="noopener">散尽浮华</a></p>
-<h3 id="错误：Unexpected-response-code-400"><a href="#错误：Unexpected-response-code-400" class="headerlink" title="错误：Unexpected response code: 400"></a>错误：<font color="red">Unexpected response code: 400</font></h3><p>WebSocket是目前比较成熟的技术了，WebSocket协议为创建客户端和服务器端需要实时双向通讯的webapp提供了一个选择。其为HTML5的一部分，WebSocket相较于原来开发这类app的方法来说，其能使开发更加地简单。大部分现在的浏览器都支持WebSocket，比如Firefox，IE，Chrome，Safari，Opera，并且越来越多的服务器框架现在也同样支持WebSocket。</p>
+        <p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/kevingrace/p/9512287.html">散尽浮华</a></p>
+<h3 id="错误：Unexpected-response-code-400"><a href="#错误：Unexpected-response-code-400" class="headerlink" title="错误：Unexpected response code: 400"></a>错误：<font color=red>Unexpected response code: 400</font></h3><p>WebSocket是目前比较成熟的技术了，WebSocket协议为创建客户端和服务器端需要实时双向通讯的webapp提供了一个选择。其为HTML5的一部分，WebSocket相较于原来开发这类app的方法来说，其能使开发更加地简单。大部分现在的浏览器都支持WebSocket，比如Firefox，IE，Chrome，Safari，Opera，并且越来越多的服务器框架现在也同样支持WebSocket。</p>
 <p>在实际的生产环境中，要求多个WebSocket服务器必须具有高性能和高可用，那么WebSocket协议就需要一个负载均衡层，NGINX从1.3版本开始支持WebSocket，其可以作为一个反向代理和为WebSocket程序做负载均衡。</p>
 <p>WebSocket协议与HTTP协议不同，但WebSocket握手与HTTP兼容，使用HTTP升级工具将连接从HTTP升级到WebSocket。这允许WebSocket应用程序更容易地适应现有的基础架构。例如，WebSocket应用程序可以使用标准HTTP端口80和443，从而允许使用现有的防火墙规则。</p>
 <p>WebSocket应用程序可以在客户端和服务器之间保持长时间运行的连接，从而有助于开发实时应用程序。用于将连接从HTTP升级到WebSocket的HTTP升级机制使用Upgrade和Connection头。反向代理服务器在支持WebSocket时面临一些挑战。一个是WebSocket是一个逐跳协议，因此当代理服务器拦截客户端的升级请求时，需要向后端服务器发送自己的升级请求，包括相应的头文件。此外，由于WebSocket连接长期存在，与HTTP使用的典型短期连接相反，反向代理需要允许这些连接保持打开状态，而不是关闭它们，因为它们似乎处于空闲状态。</p>
 <p>允许在客户机和后端服务器之间建立隧道，NGINX支持WebSocket。对于NGINX将升级请求从客户端发送到后台服务器，必须明确设置Upgrade和Connection标题。</p>
-<h2 id="Nginx开启websocket代理功能的配置如下："><a href="#Nginx开启websocket代理功能的配置如下：" class="headerlink" title="Nginx开启websocket代理功能的配置如下："></a>Nginx开启websocket代理功能的配置如下：</h2><p>1）编辑nginx.conf，在http区域内一定要添加下面配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">map $http_upgrade $connection_upgrade &#123;</span><br><span class="line">    default upgrade;</span><br><span class="line">    &apos;&apos; close;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Nginx开启websocket代理功能的配置如下："><a href="#Nginx开启websocket代理功能的配置如下：" class="headerlink" title="Nginx开启websocket代理功能的配置如下："></a>Nginx开启websocket代理功能的配置如下：</h2><p>1）编辑nginx.conf，在http区域内一定要添加下面配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">map $http_upgrade $connection_upgrade &#123;</span><br><span class="line">    default upgrade;</span><br><span class="line">    &#x27;&#x27; close;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>map指令的作用：<br>该作用主要是根据客户端请求中$http_upgrade 的值，来构造改变$connection_upgrade的值，即根据变量$http_upgrade的值创建新的变量$connection_upgrade，<br>创建的规则就是{}里面的东西。其中的规则没有做匹配，因此使用默认的，即 $connection_upgrade 的值会一直是 upgrade。然后如果 $http_upgrade为空字符串的话，<br>那值会是 close。</p>
-<p>2）编辑vhosts下虚拟主机的配置文件，在location匹配配置中添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">proxy_http_version 1.1;</span><br><span class="line">proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">proxy_set_header Connection &quot;Upgrade&quot;;</span><br></pre></td></tr></table></figure></p>
-<p>示例如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">           proxy_pass http://127.0.0.1:8080;</span><br><span class="line">           proxy_set_header Host $host:$server_port;  # </span><br><span class="line">           proxy_http_version 1.1;						# 表明使用http版本为1.1,支持websocket</span><br><span class="line">           proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">           proxy_set_header Connection &quot;upgrade&quot;;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
+<p>2）编辑vhosts下虚拟主机的配置文件，在location匹配配置中添加如下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">proxy_http_version 1.1;</span><br><span class="line">proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">proxy_set_header Connection &quot;Upgrade&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>示例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">           proxy_pass http://127.0.0.1:8080;</span><br><span class="line">           proxy_set_header Host $host:$server_port;  # </span><br><span class="line">           proxy_http_version 1.1;						# 表明使用http版本为1.1,支持websocket</span><br><span class="line">           proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">           proxy_set_header Connection &quot;upgrade&quot;;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 
       
     </div>
@@ -451,7 +465,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/02/CentOS-MySQL鑷姩澶囦唤shell鑴氭湰/" rel="next" title="CentOS MySQL自动备份shell脚本">
+              <a href="/2019/08/02/CentOS-MySQL%E9%91%B7%EE%81%84%E5%A7%A9%E6%BE%B6%E5%9B%A6%E5%94%A4shell%E9%91%B4%E6%B0%AD%E6%B9%B0/" rel="next" title="CentOS MySQL自动备份shell脚本">
                 <i class="fa fa-chevron-left"></i> CentOS MySQL自动备份shell脚本
               </a>
             
@@ -530,10 +544,10 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">Darui</p>
-              <p class="site-description motion-element" itemprop="description">www.yanjr.cn</p>
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -541,7 +555,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
                   <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
@@ -598,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#错误：Unexpected-response-code-400"><span class="nav-number">1.</span> <span class="nav-text">错误：Unexpected response code: 400</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx开启websocket代理功能的配置如下："><span class="nav-number"></span> <span class="nav-text">Nginx开启websocket代理功能的配置如下：</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%EF%BC%9AUnexpected-response-code-400"><span class="nav-number">1.</span> <span class="nav-text">错误：Unexpected response code: 400</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx%E5%BC%80%E5%90%AFwebsocket%E4%BB%A3%E7%90%86%E5%8A%9F%E8%83%BD%E7%9A%84%E9%85%8D%E7%BD%AE%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">Nginx开启websocket代理功能的配置如下：</span></a></div>
             
 
           </div>
@@ -619,7 +633,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -648,8 +662,8 @@
 -->
 <div class="BbeiAn-info">
 鲁ICP备
-<a target="_blank" href="https://beian.miit.gov.cn">15018213号-1</a>
-
+<a target="_blank"  href="https://beian.miit.gov.cn">15018213号-1</a>
+</a>
 </div>
 
 
