@@ -14,7 +14,7 @@
  - Vue
  
 📫 How to reach me 
- - [emial](mailto:big123@126.com)
+ - [email](mailto:big123@126.com)
  - [blog](https://mblog.yanjr.cn)
  - [github](https://github.com/yanjr)
  - [twitter](https://twitter.com/Ryan85133083)
