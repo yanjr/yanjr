@@ -5,7 +5,7 @@
 
 👋 Hi, I’m @yanjr, you can call me Darui.
  - A passionate software developer from China.
- - Occasionally blogging on yanjr.cn 📖
+ - Occasionally blogging on [yanjr.cn](https://yanjr.cn) 📖
  - Java 
  
  
@@ -14,7 +14,7 @@
  - Vue
  
 📫 How to reach me 
- - here
+ - [here](https://github.com/yanjr)
 
 <!---
 yanjr/yanjr is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
